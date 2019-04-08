@@ -1,0 +1,96 @@
+ <h2 class="page-header">Register</h2>
+{{#if username}}
+<div class="alert alert-danger">Username has taken already.. try new</div>
+{{/if}}
+{{#if email}}
+<div class="alert alert-danger">Email has taken already.. try new</div>
+{{/if}}
+{{#if errors}}
+{{#each errors}}
+<div class="alert alert-danger">{{msg}}</div>
+{{/each}}
+{{/if}}
+ 
+
+<form method="post" action="/users/user/register">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" placeholder="Name" name="name">
+    </div>
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" placeholder="Username" name="username">
+    </div>
+    <div class="form-group">
+        <label>Email ID</label>
+        <input type="email" class="form-control" placeholder="Email" name="email_id">
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password" name="password">
+    </div>
+    <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" class="form-control" placeholder="Password" name="password2">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form> 
+<p>Go Back <a href="/">Home</a>.</p>
+
+
+{{!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Login Register</title>
+ <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+ <link rel="stylesheet" 
+ href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+ <style>
+  html{
+   padding:50px;
+  }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <div class="col-sm-6 col-sm-offset-3">
+   <h2>Register</h2>
+
+   <% if(message.length > 0) { %>
+    <div class="alert alert-danger"><%= message %></div> 
+   <% } %>
+
+   <form action="/signup" method="post">
+    <div class="form-group">
+     <label>Username</label>
+     <input type="text" class="form-control" name="username">
+    </div>
+    <div class="form-group">
+     <label>Password</label>
+     <input type="text" class="form-control" name="password">
+    </div>
+
+    <button type="submit" class="btn btn-succcess btn-lg">Register</button>
+   </form>
+
+   <hr>
+
+   <p>Need an account <a href="/signup">Register</a></p>
+   <p>Go Back <a href="/">Home</a>.</p>
+  </div>
+ </div>
+</body>
+</html>
+ --}}
+
+
+
+
+
+
+
